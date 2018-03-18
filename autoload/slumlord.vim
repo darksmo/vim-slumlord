@@ -36,17 +36,17 @@ function! s:shouldInsertPreview() abort
 
     "check for state diagram
     if search('^\s*\[\*\]', 'wn') > 0
-        return
+        return 1
     endif
 
     "check for use cases
     if search('^\s*\%((.*)\|:.*:\)', 'wn') > 0
-        return
+        return 1
     endif
 
     "check for class diagrams
     if search('^\s*class\>', 'wn') > 0
-        return
+        return 1
     endif
 
     "check for activity diagrams
